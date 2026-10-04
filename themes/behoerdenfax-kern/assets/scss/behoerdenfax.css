@@ -1,0 +1,53 @@
+/* Behördenfax KERN – EUPL-1.2. Fira Sans: SIL OFL 1.1 (via KERN-UX) */
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column}
+.main{flex:1;padding-block:var(--kern-metric-space-x-large,2.5rem)}
+.kern-container{max-width:60rem;margin-inline:auto;padding-inline:1rem;box-sizing:border-box}
+.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:10}
+.kern-kopfzeile-wrap{border-bottom:1px solid currentColor}
+.site-header{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding-block:1rem}
+.site-brand{display:flex;gap:1rem;align-items:center;text-decoration:none;color:inherit}
+.site-logo{width:48px;height:48px;object-fit:contain}
+.hero{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem}
+.fax-card{max-width:32rem}
+.fax-number{font-size:2.25rem;font-weight:700;margin:.25rem 0}
+.fax-number a{text-decoration:none}
+.post-teaser{margin-block:1.5rem}
+.content img{max-width:100%;height:auto}
+.site-footer{border-top:1px solid currentColor;padding-block:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.site-footer .kern-container{display:flex;flex-direction:column;gap:1rem}
+.pagination{display:flex;gap:1rem;margin-top:2rem}
+
+/* ---- Design: Orange (Logo) auf KERN-Basis ---- */
+:root{--bf-orange:#ff9500;--bf-ink:#111}
+.kern-kopfzeile-wrap{border-bottom:6px solid var(--bf-orange)}
+.main{padding-block:0}
+.hero{background-size:cover;background-position:center;min-height:34rem;color:#fff}
+.hero__shade{background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 60%,rgba(0,0,0,.25) 100%);min-height:inherit;display:flex;align-items:center}
+.hero__inner{display:flex;flex-direction:column;gap:1.25rem;padding-block:4rem}
+.hero__kicker{margin:0;text-transform:uppercase;letter-spacing:.12em;font-size:.875rem;color:var(--bf-orange);font-weight:700}
+.hero__title{margin:0;font-size:clamp(2.25rem,6vw,4.5rem);line-height:1.05;font-weight:700;max-width:16ch}
+.hero__lead{margin:0;font-size:1.25rem;max-width:36rem}
+.fax-plate{align-self:flex-start;display:flex;flex-direction:column;gap:.25rem;background:#fff;color:var(--bf-ink);border:6px solid var(--bf-orange);border-radius:.5rem;padding:1rem 1.5rem;margin-top:.5rem}
+.fax-plate__label{font-family:"Courier New",Courier,monospace;font-size:1rem}
+.fax-plate__number{font-family:"Courier New",Courier,monospace;font-weight:700;font-size:clamp(1.75rem,5vw,3rem);color:var(--bf-ink);text-decoration:none;letter-spacing:.04em}
+.fax-plate__number:hover,.fax-plate__number:focus{text-decoration:underline}
+.fax-plate__note{font-size:.875rem}
+.steps{padding-block:4rem}
+.steps__list{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.step img{width:100%;aspect-ratio:3/2;object-fit:cover;border-bottom:6px solid var(--bf-orange);display:block;margin-bottom:1rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr)}
+.gallery figure{margin:0;min-height:16rem;background-size:cover;background-position:center;filter:grayscale(.4)}
+@media(max-width:40rem){.gallery{grid-template-columns:1fr}}
+.cta{background:var(--bf-orange);padding-block:3rem}
+.cta__inner{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:center}
+.cta__inner img{max-width:100%;height:auto;border-radius:.5rem}
+.cta .kern-btn--primary,.cta .kern-btn--primary:visited{background:var(--bf-ink);color:#fff;border-color:var(--bf-ink)}
+.cta .kern-btn--primary .kern-label{color:#fff}
+.cta .kern-btn--primary:hover,.cta .kern-btn--primary:focus-visible{background:#fff;color:var(--bf-ink);border-color:var(--bf-ink)}
+.cta .kern-btn--primary:hover .kern-label,.cta .kern-btn--primary:focus-visible .kern-label{color:var(--bf-ink)}
+.cta .kern-btn--primary:focus-visible{outline:3px solid var(--bf-ink);outline-offset:3px}
+.site-footer{border-top:none;background:var(--bf-ink);color:#fff}
+.site-footer .kern-link,.site-footer .kern-body{color:#fff}
