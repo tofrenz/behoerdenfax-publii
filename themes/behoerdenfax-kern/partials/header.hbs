@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{@website.language}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{#if title}}<title>{{title}}</title>{{else}}<title>{{@website.name}}</title>{{/if}}
+    {{metaDescription}}
+    {{metaRobots}}
+    {{{publiiHead}}}
+    {{canonicalLink}}
+    {{socialMetaTags}}
+    <link rel="stylesheet" href="{{css "style.css"}}">
+</head>
+<body class="kern-body">
+    <a class="skip-link kern-link" href="#main">Zum Inhalt springen</a>
+    <div class="kern-kopfzeile-wrap">
+        <div class="kern-container">
+            <header class="site-header">
+                <a class="site-brand" href="{{@website.url}}">
+                    <img src="{{@website.assetsUrl}}/images/logo-fax.png" alt="" width="48" height="48" class="site-logo">
+                    <span class="kern-title kern-title--large">{{@website.name}}</span>
+                </a>
+                {{#if menus.mainMenu}}
+                <nav aria-label="Hauptnavigation">
+                    <ul class="kern-list kern-list--horizontal">
+                        {{#each menus.mainMenu.items}}<li><a class="kern-link" href="{{menuUrl}}">{{label}}</a></li>{{/each}}
+                    </ul>
+                </nav>
+                {{else}}
+                    {{#if @config.custom.podcastUrl}}
+                <nav aria-label="Hauptnavigation">
+                    <ul class="kern-list kern-list--horizontal"><li><a class="kern-link" href="{{@config.custom.podcastUrl}}" rel="noopener">Podcast</a></li></ul>
+                </nav>
+                    {{/if}}
+                {{/if}}
+            </header>
+        </div>
+    </div>
