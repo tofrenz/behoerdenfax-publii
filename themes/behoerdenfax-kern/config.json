@@ -1,0 +1,316 @@
+{
+  "name": "behoerdenfax-kern",
+  "version": "1.0.0",
+  "author": "Torsten Frenzel",
+  "authorUrl": "https://torsten-frenzel.de",
+  "license": "EUPL-1.2",
+  "demoUrl": "https://behoerdenfax.de",
+  "description": "Minimalistisches Publii-Theme auf Basis des KERN-UX Design Systems für die Satire-Seite Behördenfax.",
+  "renderer": {
+    "relatedPostsNumber": 0,
+    "renderRelatedPosts": false,
+    "renderSimilarPosts": false,
+    "renderPrevNextPosts": false,
+    "createContentStructure": true,
+    "createTagPages": true,
+    "createAuthorPages": true,
+    "createTagsList": false,
+    "createSearchPage": false,
+    "create404page": true,
+    "customHTML": {}
+  },
+  "menus": {
+    "mainMenu": {
+      "desc": "",
+      "name": "Hauptmenü",
+      "maxLevels": 1
+    }
+  },
+  "supportedFeatures": {
+    "blockEditor": true,
+    "tagsList": false,
+    "tagPages": true,
+    "tagImages": true,
+    "authorPages": true,
+    "authorImages": true,
+    "searchPage": false,
+    "errorPage": true,
+    "customSharing": false,
+    "customSearch": false,
+    "customComments": false,
+    "embedConsents": true,
+    "pages": true,
+    "postsPage": false
+  },
+  "config": [
+    {
+      "name": "postsPerPage",
+      "label": "Posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "tagsPostsPerPage",
+      "label": "Tags posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "authorsPostsPerPage",
+      "label": "Authors posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "excerptLength",
+      "label": "Excerpt length",
+      "value": 45,
+      "type": "number"
+    },
+    {
+      "name": "logo",
+      "label": "Website logo",
+      "value": "",
+      "type": "upload",
+      "upload": true
+    }
+  ],
+  "postConfig": [],
+  "pageConfig": [],
+  "tagConfig": [],
+  "authorConfig": [],
+  "customElements": [],
+  "customConfig": [
+    {
+      "name": "faxNumber",
+      "label": "Faxnummer",
+      "value": "08142/6553738",
+      "type": "text",
+      "group": "Kontakt"
+    },
+    {
+      "name": "faxHint",
+      "label": "Hinweistext unter der Faxnummer",
+      "value": "Ja, hier hängt wirklich ein funktionierendes Faxgerät dran.",
+      "type": "text",
+      "group": "Kontakt"
+    },
+    {
+      "name": "headline",
+      "label": "Startseiten-Überschrift",
+      "value": "Dein Kummer gehört auf ein Fax.",
+      "type": "text",
+      "group": "Startseite"
+    },
+    {
+      "name": "podcastUrl",
+      "label": "Podcast-URL",
+      "value": "https://egovernment-podcast.com",
+      "type": "text",
+      "group": "Links"
+    },
+    {
+      "name": "eventsUrl",
+      "label": "Veranstaltungskalender-URL",
+      "value": "",
+      "type": "text",
+      "group": "Links"
+    },
+    {
+      "name": "instagramUrl",
+      "label": "Instagram-URL",
+      "value": "https://www.instagram.com/behoerdenfax",
+      "type": "text",
+      "group": "Links"
+    },
+    {
+      "name": "linkedinUrl",
+      "label": "LinkedIn-URL",
+      "value": "https://www.linkedin.com/company/egovpod",
+      "type": "text",
+      "group": "Links"
+    },
+    {
+      "name": "mastodonUrl",
+      "label": "Mastodon-URL",
+      "value": "",
+      "type": "text",
+      "group": "Links"
+    }
+  ],
+  "pageTemplates": {},
+  "files": {
+    "ignoreAssets": [
+      "scss",
+      ".DS_Store"
+    ],
+    "assetsPath": "assets",
+    "useDynamicAssets": true,
+    "partialsPath": "partials",
+    "responsiveImages": {
+      "contentImages": {
+        "sizes": "(max-width: 1920px) 100vw, 1920px",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "featuredImages": {
+        "sizes": {
+          "hero": "88vw",
+          "feed": "(min-width: 600px) calc(4.38vw + 143px), 87.86vw"
+        },
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto",
+            "group": "hero"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto",
+            "group": "hero"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto",
+            "group": "hero"
+          }
+        }
+      },
+      "tagImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "authorImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "optionImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "galleryImages": {
+        "sizes": "",
+        "dimensions": {
+          "thumbnail": {
+            "width": 720,
+            "height": "auto"
+          }
+        }
+      }
+    }
+  }
+}

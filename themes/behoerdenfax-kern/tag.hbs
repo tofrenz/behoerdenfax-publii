@@ -1,0 +1,11 @@
+{{> header}}
+<main id="main" class="kern-container main">
+    <h1 class="kern-heading-x-large">{{title}}</h1>
+    {{#each posts}}
+    <article class="post-teaser">
+        <h2 class="kern-heading-medium"><a class="kern-link" href="{{url}}">{{title}}</a></h2>
+        <p class="kern-body kern-body--muted">{{date createdAt 'DD.MM.YYYY'}}</p>
+    </article>
+    {{/each}}
+</main>
+{{> footer}}

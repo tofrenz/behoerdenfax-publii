@@ -1,0 +1,55 @@
+{{> header}}
+<main id="main">
+    <section class="hero" style="background-image:url('{{@website.assetsUrl}}/images/fax-tastatur.jpg')">
+        <div class="hero__shade">
+            <div class="kern-container hero__inner">
+                <p class="hero__kicker">Behörden(kummer)fax · by eGovernment Podcast</p>
+                <h1 class="hero__title">{{@config.custom.headline}}</h1>
+                <p class="hero__lead">Schreibe deinen Kummer auf ein Blatt Papier und schicke ihn per Fax. Ja, wirklich: Hier hängt ein funktionierendes Faxgerät.</p>
+                <div class="fax-plate">
+                    <span class="fax-plate__label">Eure Faxnummer bei Digitalisierungskummer</span>
+                    <a class="fax-plate__number" href="tel:{{@config.custom.faxNumber}}">{{@config.custom.faxNumber}}</a>
+                    <span class="fax-plate__note">{{@config.custom.faxHint}} · auch erreichbar aus dem EPVPN unter 3468</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kern-container steps" aria-labelledby="steps-h">
+        <h2 id="steps-h" class="kern-heading-large">So geht Kummer-Kommunikation</h2>
+        <ol class="steps__list">
+            <li class="step"><img src="{{@website.assetsUrl}}/images/stempel.jpg" alt="" loading="lazy"><h3 class="kern-heading-small">1. Aufschreiben</h3><p class="kern-body">Papier, Stift, Frust – mehr braucht es nicht.</p></li>
+            <li class="step"><img src="{{@website.assetsUrl}}/images/fax-tastatur.jpg" alt="" loading="lazy"><h3 class="kern-heading-small">2. Faxen</h3><p class="kern-body">Anonymisiert wird später. Erst mal wählen: {{@config.custom.faxNumber}}.</p></li>
+            <li class="step"><img src="{{@website.assetsUrl}}/images/aktenstapel-sw.jpg" alt="" loading="lazy"><h3 class="kern-heading-small">3. Teilen &amp; Antwort</h3><p class="kern-body">Anonym in den sozialen Medien und im Podcast – und jedes Fax bekommt eine persönliche Antwort per Fax, E-Mail oder Post.</p></li>
+        </ol>
+    </section>
+
+    <section class="gallery" aria-label="Eindrücke aus dem Behördenalltag">
+        <figure style="background-image:url('{{@website.assetsUrl}}/images/aktenordner-stapel.jpg')"></figure>
+        <figure style="background-image:url('{{@website.assetsUrl}}/images/alte-ordner.jpg')"></figure>
+        <figure style="background-image:url('{{@website.assetsUrl}}/images/aktenstapel-sw.jpg')"></figure>
+    </section>
+
+    <section class="cta">
+        <div class="kern-container cta__inner">
+            <img src="{{@website.assetsUrl}}/images/banner.png" alt="Behörden(kummer)fax – 08142 6553738 – behoerdenfax.de" width="750" height="250" loading="lazy">
+            <div class="kern-btn-wrapper">
+                {{#if @config.custom.podcastUrl}}<a class="kern-btn kern-btn--primary kern-btn--large" href="{{@config.custom.podcastUrl}}" rel="noopener"><span class="kern-label">Zum eGovernment Podcast</span></a>{{/if}}
+            </div>
+        </div>
+    </section>
+
+    {{#if posts}}
+    <section class="kern-container" aria-labelledby="posts-heading">
+        <h2 id="posts-heading" class="kern-heading-large">Neueste Beiträge</h2>
+        {{#each posts}}
+        <article class="post-teaser">
+            <h3 class="kern-heading-medium"><a class="kern-link" href="{{url}}">{{title}}</a></h3>
+            <p class="kern-body kern-body--muted">{{date createdAt 'DD.MM.YYYY'}}</p>
+        </article>
+        {{/each}}
+        {{> pagination}}
+    </section>
+    {{/if}}
+</main>
+{{> footer}}
